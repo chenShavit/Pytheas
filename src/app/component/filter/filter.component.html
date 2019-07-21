@@ -20,13 +20,13 @@
   <div class="subtitle dates">
     <div class="title-img"><img src="/assets/calendar-icon.png">Dates</div>
     <mat-form-field>
-        <input matInput [matDatepicker]="picker1" placeholder="Choose a start date" [(ngModel)]="inputStartDate">
+        <input matInput [matDatepicker]="picker1" placeholder="Choose a start date">
         <mat-datepicker-toggle matSuffix [for]="picker1" (selectedChanged)="updateStartDate($event)"></mat-datepicker-toggle>
         <mat-datepicker #picker1 [startAt]="startDate" (selectedChanged)="updateEndDate($event)"></mat-datepicker>
       </mat-form-field>
       
       <mat-form-field>
-        <input matInput [matDatepicker]="picker2" placeholder="Choose an end date" [(ngModel)]="inputEndDate">
+        <input matInput [matDatepicker]="picker2" placeholder="Choose an end date">
         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
         <mat-datepicker #picker2 [startAt]="endDate"></mat-datepicker>
       </mat-form-field>
