@@ -22,20 +22,14 @@
     <mat-form-field>
         <input matInput [matDatepicker]="picker1" placeholder="Choose a start date">
         <mat-datepicker-toggle matSuffix [for]="picker1" (selectedChanged)="updateStartDate($event)"></mat-datepicker-toggle>
-        <mat-datepicker #picker1 [startAt]="startDate" (selectedChanged)="updateEndDate($event)"></mat-datepicker>
+        <mat-datepicker #picker1 (selectedChanged)="updateEndDate($event)"></mat-datepicker>
       </mat-form-field>
       
       <mat-form-field>
         <input matInput [matDatepicker]="picker2" placeholder="Choose an end date">
         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker #picker2 [startAt]="endDate"></mat-datepicker>
+        <mat-datepicker #picker2 ></mat-datepicker>
       </mat-form-field>
-    <!-- <ion-item>
-              <ion-datetime placeholder="Date Start"  [(ngModel)]="startDate" (ionChange)="getDateStart($event)"></ion-datetime>
-          </ion-item>
-          <ion-item>
-              <ion-datetime class="datetimeColor" placeholder="End Start"  [(ngModel)]="endDate" (ionChange)="getDateEnd($event)"></ion-datetime>
-          </ion-item> -->
     <span *ngIf="showError" class="error">Please select at least 2 days</span>
   </div>
   <div class="subtitle price">
