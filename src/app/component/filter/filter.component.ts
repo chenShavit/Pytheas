@@ -38,7 +38,7 @@ this.dataService.getCities();
     document.getElementById("myUL").style.display = "none";
     debugger
     var search = document.getElementById("search");
-    search.value=city;
+    search.innerHTML=city;
     this.tripService.filterObj.city=city;
   }
   updateStartDate(event:any){
