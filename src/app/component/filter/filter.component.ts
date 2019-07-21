@@ -52,7 +52,6 @@ this.dataService.getCities();
      this.tripService.filterObj.maxPrice=maxVal;
   }
   onChange(event:any){
-    debugger
     var selectVal= event.source._value;
     this.tripService.filterObj.pepoleNum=selectVal;
     console.log(this.tripService.filterObj);

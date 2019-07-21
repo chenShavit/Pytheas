@@ -19,7 +19,6 @@ export class ExploreComponent implements OnInit {
    ngOnInit() {
     //  this.tripService.loadAnimation();
     //  this.tripService.getExplore();
-    debugger
      console.log(this.tripService.expolreTrips);
      for( var i=0; i <this.tripService.expolreTrips.length;i++){
        this.tripService.expolreTrips[i].pictures=this.pics;

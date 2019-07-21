@@ -210,4 +210,15 @@ button{
         background-repeat: no-repeat !important;
       
   }
+  .save{
+    position: absolute;
+    right: 5%;
+    font-size: 23pt;
+    bottom: 20pt;
+    background-color: #FF5347;
+    z-index: 10;
+    color: #c1c1c1;
+    border: 1px solid #FF5347;
+    margin: 0 auto;
+  }
 

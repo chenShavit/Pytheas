@@ -28,13 +28,12 @@ export class MapComponent implements OnInit {
   markURL:string = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
   kilURL: string ='https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&';
   //origins=48.877352,2.296985&destinations=48.860166,2.326572&key=AIzaSyCzUAH1xG3UbqX8btjKTE80KoOMPgiknzo&mode=walking
-  // markers = [
-  //   { lat: 48.877352, lng: 2.296985 },
-  //   { lat: 48.860166, lng: 2.326572, alpha: 1 },
-  //   { lat: 48.855519, lng: 2.315814, alpha: 1 },
-  //   { lat: 48.875619, lng: 2.310487, alpha: 1 },
-  // ];
-  markers:any=[];
+  markers = [
+    { lat: 48.877352, lng: 2.296985 },
+    { lat: 48.860166, lng: 2.326572, alpha: 1 },
+    { lat: 48.855519, lng: 2.315814, alpha: 1 },
+    { lat: 48.875619, lng: 2.310487, alpha: 1 },
+  ];
   mark:any={
     lat:0,
     lng:0
@@ -44,11 +43,10 @@ export class MapComponent implements OnInit {
   }
   
   ngOnInit() {
-    debugger
     this.zoom = 12;
     this.lat = 48.857118;
     this.lng = 2.355305;
-      this.markers=this.tripService.markesTemp;
+      // this.markers=this.tripService.markesTemp;
       this.kilometers=4.4;
   }
   addMarker(lat: number, lng: number) {
@@ -59,6 +57,9 @@ export class MapComponent implements OnInit {
     if (this.i <this.markers.length) {
       this.getDirection(this.markers[this.i],this.markers[this.i+1],this.i);
       this.getKilometers(this.markers[this.i],this.markers[this.i+1]);
+
+      this.currentPlace=this.tripService.places[this.i];
+      this.nextPlace=this.tripService.places[this.i+1];
 
     }
   }
@@ -77,7 +78,6 @@ export class MapComponent implements OnInit {
     this.nextPlace= this.tripService.places[index+1];
   }
   getKilometers(origin:any, destination:any){
-   
     var o = new google.maps.LatLng(origin);
     var d =  new google.maps.LatLng(destination);
     this.kilometers = (google.maps.geometry.spherical.computeDistanceBetween(o, d)/ 1000).toFixed(2);

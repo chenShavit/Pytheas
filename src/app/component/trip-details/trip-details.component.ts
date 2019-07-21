@@ -18,7 +18,6 @@ export class TripDetailsComponent implements OnInit {
   ngOnInit() {
     this.trip = this.tripService.trip;
     if (!this.trip) {
-      debugger
       this.trip = this.tripService.trips[this.tripService.tripNum];
     }
     for (var i = 0; i < this.trip.places[0].length; i++) {
