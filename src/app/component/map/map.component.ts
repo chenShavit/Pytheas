@@ -44,6 +44,7 @@ export class MapComponent implements OnInit {
   }
   
   ngOnInit() {
+    debugger
     this.zoom = 12;
     this.lat = 48.857118;
     this.lng = 2.355305;

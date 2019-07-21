@@ -36,9 +36,7 @@ this.dataService.getCities();
   }
   chooseCity(city:string){
     document.getElementById("myUL").style.display = "none";
-    debugger
-    var search = document.getElementById("search");
-    search.innerHTML=city;
+    (<HTMLInputElement>document.getElementById("search")).value=city;
     this.tripService.filterObj.city=city;
   }
   updateStartDate(event:any){

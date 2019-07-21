@@ -8,7 +8,7 @@
   <div class="subtitle destination">
     <img src="/assets/location.png"> Destination
     <div class="autocomplete">
-      <input type="text" id="search" (keyup)="onSelectedOption($event)"
+      <input type="text" id="search" (keyup)="onSelectedOption($event)" value=""
        placeholder="Type a destination" style="margin:auto; width: 70%; margin-top: 30px;">
       <ul id="myUL">
         <li *ngFor="let res of cities" (click)="chooseCity(res.city)"> {{res.city}}, {{res.country}}</li>

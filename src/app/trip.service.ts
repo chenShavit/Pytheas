@@ -72,6 +72,7 @@ export class TripService {
 
   }
   constructor(private http: HttpClient) {
+    debugger
     for (var i = 0; i < users.length; i++) {
       if (users[i].email == this.user_email) {
         this.user = users[i];

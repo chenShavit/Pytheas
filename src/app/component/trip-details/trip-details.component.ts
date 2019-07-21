@@ -25,7 +25,7 @@ export class TripDetailsComponent implements OnInit {
       this.tripService.places.push(this.trip.places[0][i].address)
     }
     for (var i = 0; i < this.tripService.places.length; i++) {
-      this.tripService.getMarkCoord(this.tripService.places[i]);
+      // this.tripService.getMarkCoord(this.tripService.places[i]);
     }
     var l = this.tripService.markesTemp;
   }
