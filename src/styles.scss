@@ -1,0 +1,56 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
+
+body {
+    margin: 0px;
+    padding: 0px;
+  }
+  *{
+    font-family: Roboto-Regular;
+}
+@font-face {
+    font-family: Roboto-Regular;
+    font-style: normal;
+    font-weight: 900;
+    src:  url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: Roboto-Black;
+    font-style: normal;
+    font-weight: 900;
+    src:  url('/assets/fonts/Roboto-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: Roboto-Medium;
+    font-style: normal;
+    font-weight: 900;
+    src:  url('/assets/fonts/Roboto-Medium.ttf') format('truetype');
+}
+.ng5-slider .ng5-slider-pointer {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    top: -14px;
+    background-color: #FF5347 !important;
+    z-index: 3;
+    border-radius: 16px;
+}
+.ng5-slider .ng5-slider-selection {
+    z-index: 2;
+    background: #FF5347 !important;
+    border-radius: 2px;
+}
+.ng5-slider .ng5-slider-pointer.ng5-slider-active:after{
+    background-color: #FF5347 !important;
+}
+.mat-form-field {
+    display: block !important;
+    position: relative;
+    text-align: left;
+}
+.mat-form-field-ripple {
+    background-color: #FF5347 !important;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #FF5347  !important;
+}

@@ -1,0 +1,134 @@
+#search {
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ff534730; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  ::placeholder{
+    color:#ff534730;
+  }
+  }
+  #myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  #myUL li {
+    width: 81%;
+    border: 1px solid #FF5347; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: #FF5347; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }  
+  .dialog {
+    background-color: white;
+    padding-top: 55px;
+    padding-right: 16px;
+    padding-left: 24px;
+    .close {
+        background: url('/assets/cancel.png');
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 15px;
+        float: right;
+    }
+    .error{
+        display: block;
+        margin-left: 17px;
+        margin-top: 6px;
+    }
+    }
+    .title {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color:#ff5347;
+    }
+    .subtitle{
+        font-size: 16px;
+        font-weight: bold;
+        color:#ff5347;
+        margin-bottom: 40px;
+        img{
+            margin-right: 17px;
+        }
+    }
+    .title-img{
+        margin-bottom: 24px;
+    }
+    .datetime-text{
+        color: #ff5347;
+        font-size: 11px;
+        border-color: #ff5347;
+    }
+    input::var(--placeholder-color){
+        color: #ff5347;
+    }
+    .datetimeColor{
+        color: #ff5347;
+    }
+    .slider{
+        display: block;
+    }
+.sc-ion-input-ios-h {
+    --padding-top: 10px;
+    --padding-end: 9px;
+    --padding-bottom: 10px;
+    --padding-start: 16px;
+    font-size: inherit;
+    height: 42px;
+    border: 1px solid #ff534730;
+    margin-top: 24px;
+    margin-bottom: 34px;
+}
+:host(.datetime-placeholder) {
+    color: #ff5347;
+    font-size: 11px;
+    margin-left: 4px;
+}
+.range-bar{
+    color: #ff5347;
+}
+
+.slider{
+    margin-right: 100px;    
+}
+
+.select-drop{
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    width: 155px;
+    height: 48px;
+    border: 1px solid;
+    padding: 6px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.bth-next{
+    width: 123px;
+    height: 34px;
+    border: 2px solid #FF5347;
+    text-align: center;
+    color: #FF5347;
+    border-radius: 27px;
+    font-size: 16px;
+    background-color: white;
+    margin: 0 auto;
+    padding-top: 3px;
+}
+.bth-next:hover {
+    width: 123px;
+    height: 34px;
+    background: linear-gradient(to right, #FE784D, #FF5347);
+    color: white;
+}
+

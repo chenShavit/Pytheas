@@ -1,0 +1,61 @@
+
+  <div class="container">
+    <div class="header">
+      <div class="side-bar">
+  
+      </div>
+      <div class="title">{{this.user.full_name}}</div>
+      <div class="edit-profile">
+        <div class="saved">
+          <div class="number-saved">
+            0
+          </div>
+          SAVED 
+        </div>
+        <div class="profile-details">
+          <div class="icon">
+  
+          </div>
+        </div>
+        <div class="trips">
+          <div class="number-trips">
+            {{this.user.trips.length}}
+          </div>
+          TRIPS
+        </div>
+        <div class="edit-bth">
+  
+        </div>
+  
+      </div>
+    </div>
+    <div class="container-trips">CURRENT TRIP
+      <div class="current-trips" *ngFor="let trip of tripService.trips; let i=index">
+        <div class="trip" (click)="chooseTrip(i)" >
+          <div class="picture">
+            <img src="{{trip.pictures[0]}}">
+          </div>
+          <div class="name">{{trip.destination}}</div>
+          <div class="details">
+            <span>{{trip.days}}</span><span>DAYS</span>
+            <span><img src="/assets/location.png">{{trip.places.length}}</span>
+          </div>
+  
+          <div class="day">
+           <span> 04 </span><span>September</span>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="planned-trips">PLANNED TRIPS
+  
+      </div>
+    </div>
+    <div class="placeholder-bth" [routerLink]="['/choose']">
+        <span class="tooltiptext">Explore trips</span>
+    <button class="explore-bth">
+       <img src="/assets/explore-icon.png">
+       
+</button>
+</div>
+  </div>
