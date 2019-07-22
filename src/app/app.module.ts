@@ -35,6 +35,7 @@ import { HomeComponent } from './component/home/home.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { TripService } from './trip.service';
 
+
 @NgModule({
   
   declarations: [
@@ -50,7 +51,7 @@ import { TripService } from './trip.service';
     TripMainComponent,
     SearchBarComponent,
     FlightsComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     MatSelectModule,

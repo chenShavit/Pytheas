@@ -12,11 +12,10 @@ export class FormStepComponent implements OnInit {
   stepNumber:any=1;
   profile:any={
     username:'Chen',
-    profile_name:'',
-    tags:['']
+    profile_name:''
   }
   secondFormGroup:FormGroup;
-
+  selectable: boolean = true
   constructor(private _formBuilder: FormBuilder,private router: Router , public tripService: TripService) { }
 
   ngOnInit() {
@@ -24,7 +23,10 @@ export class FormStepComponent implements OnInit {
       profileName: new FormControl()
     })
   }
-
+  isSelected(tag: any): boolean {
+    this.tripService.selectedTags.push(tag);
+    return tag.isClicked = !tag.isClicked;
+  }
   nextStep(val:any){
     this.profile.profile_name=val;
     if(val){

@@ -34,7 +34,7 @@ export class TripService {
   hotel:Hotel;
   flight : Flight;
   attraction:any;
-  tags: any;
+  tags: any=[];
   selectedTags: any = [];
   deep_link:string;
   depTime:any;
@@ -75,6 +75,7 @@ export class TripService {
     for (var i = 0; i < users.length; i++) {
       if (users[i].email == this.user_email) {
         this.user = users[i];
+        this.tags=this.user.tags;
         for( var j=0; j< users[i].trips.length;j++){
           if(this.user.trips[j].isBooked)(
           this.trips.push(this.user.trips[j])
@@ -92,6 +93,7 @@ export class TripService {
       loop: true
   };
   }
+
   // public getTrips(): Promise<any> {
   //   return this.http.get(this.baseUrl + '/trip').toPromise()
   //   .then((res: any) => {
@@ -120,12 +122,12 @@ export class TripService {
 
       }).catch(); 
   }
-  public getTags(): Promise<any> {
-    return this.http.get(this.baseUrl + '/tags').toPromise()
-      .then((res: any) => {
-        this.tags = res.slice(0, 15);
-      }).catch();
-  }
+  // public getTags(): Promise<any> {
+  //   return this.http.get(this.baseUrl + '/tags').toPromise()
+  //     .then((res: any) => {
+  //       this.tags = res.slice(0, 15);
+  //     }).catch();
+  // }
   
   public getCities(): Promise<any> {
     return this.http.get(this.baseUrl + '/cities').toPromise()
