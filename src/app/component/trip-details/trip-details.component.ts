@@ -16,6 +16,7 @@ export class TripDetailsComponent implements OnInit {
   days: any;
 
   ngOnInit() {
+    this.trip='';
     this.trip = this.tripService.trip;
     if (!this.trip) {
       this.trip = this.tripService.trips[this.tripService.tripNum];
