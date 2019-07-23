@@ -16,7 +16,7 @@
             height: 75vh;
             background-repeat: no-repeat;
         }
-        .start-bth {
+        .bth {
             background-color: white;
             width: 30%;
             height: 40px;
@@ -32,6 +32,18 @@
                 font-family: Roboto-Black;
                 margin-top: 3px;
             }
+        }
+        .google-plus{
+            background: url('/assets/google-plus.png');
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+        }
+        .facebook{
+            background: url('/assets/facebook-logo-button.png');
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
         }
     }
 }
