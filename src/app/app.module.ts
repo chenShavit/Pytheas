@@ -35,22 +35,22 @@ import { HomeComponent } from './component/home/home.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { TripService } from './trip.service';
 
-import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
-import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
+// import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
+// import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
 
-let config = new AuthServiceConfig([
-  // {
-  //   id: GoogleLoginProvider.PROVIDER_ID,
-  //   provider: new GoogleLoginProvider("Google-OAuth-Client-Id")
-  // },
-  // {
-  //   id: FacebookLoginProvider.PROVIDER_ID,
-  //   provider: new FacebookLoginProvider("Facebook-App-Id")
-  // }
-]);
-export function provideConfig() {
-  return config;
-}
+// let config = new AuthServiceConfig([
+//   {
+//     id: GoogleLoginProvider.PROVIDER_ID,
+//     provider: new GoogleLoginProvider("Google-OAuth-Client-Id")
+//   },
+//   {
+//     id: FacebookLoginProvider.PROVIDER_ID,
+//     provider: new FacebookLoginProvider("Facebook-App-Id")
+//   }
+// ]);
+// export function provideConfig() {
+//   return config;
+// }
 
 @NgModule({
   
@@ -70,7 +70,7 @@ export function provideConfig() {
     HomeComponent,
   ],
   imports: [
-    SocialLoginModule,
+    // SocialLoginModule,
     MatSelectModule,
     BrowserAnimationsModule,
     Ng5SliderModule,
@@ -94,10 +94,12 @@ export function provideConfig() {
     }),
     RouterModule.forRoot([])
   ],
-  providers: [DataService, TripService,  {
-    provide: AuthServiceConfig,
-    useFactory: provideConfig
-  }],
+  providers: [DataService, TripService
+  //    {
+  //   provide: AuthServiceConfig,
+  //   useFactory: provideConfig
+  // }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
