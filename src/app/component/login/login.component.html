@@ -4,9 +4,9 @@
         <div class="logo"></div>
       </div>
           <input type="email" [(ngModel)]="data.email" (keyup)=checkEmail($event)>
-          <span class="error"  *ngIf="isEmail&&!isLogin">*InValid Email address</span>
+          <span class="error"  *ngIf="isEmail&&!dataService.isLogin">*InValid Email address</span>
           <input type="password" [(ngModel)]="data.password">
-          <span class="error password" *ngIf="this.dataService.inValidPas&&isLogin">Wrong password</span>
+          <span class="error password" *ngIf="this.dataService.inValidPas&&dataService.isLogin">Wrong password</span>
         <div class="bth" (click)="checkForm()">
             <span *ngIf="dataService.isLogin">Log in</span>
             <span *ngIf="!dataService.isLogin">Sign up</span>
