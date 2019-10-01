@@ -15,7 +15,7 @@
         <div class="step third" *ngIf="stepNumber==2">
             <h1>What you’re interested in?</h1>
             <div class="container-chips">
-                        <li class="mat-chip" *ngFor="let tag of tripService.tags" (click)="isSelected(tag)" [ngClass]='tag.isClicked ? "clicked" : ""'>
+                        <li class="mat-chip" *ngFor="let tag of dataService.tags" (click)="isSelected(tag)" [ngClass]='tag.isClicked ? "clicked" : ""'>
                            {{tag.name}}
                         </li>
             </div>

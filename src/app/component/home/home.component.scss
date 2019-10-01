@@ -13,20 +13,21 @@
         .logo {
             background: url(/assets/TravelMaker.png) scroll -66px 0px;
             width: 100%;
-            height: 75vh;
+            height: 59vh;
             background-repeat: no-repeat;
         }
         .bth {
             background-color: white;
-            width: 30%;
-            height: 40px;
-            margin: 0 auto;
-            border-radius: 7px;
-            padding-top: 10px;
-            font-size: 18px;
-            text-align: center;
-            -webkit-filter: drop-shadow(2px 2px 2px #00000059);
-            filter: drop-shadow(2px 2px 2px #00000059);
+            background-color: white;
+    width: 33%;
+    height: 35px;
+    margin: 77px auto 21px;
+    border-radius: 19px;
+    padding-top: 16px;
+    font-size: 18px;
+    text-align: center;
+    -webkit-filter: drop-shadow(2px 2px 2px #00000059);
+    filter: drop-shadow(2px 2px 2px #00000059);
             span {
                 color: #FF5347;
                 font-family: Roboto-Black;
@@ -36,14 +37,41 @@
         .google-plus{
             background: url('/assets/google-plus.png');
             background-repeat: no-repeat;
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
         }
         .facebook{
             background: url('/assets/facebook-logo-button.png');
             background-repeat: no-repeat;
             width: 24px;
             height: 24px;
+        }
+        .sign-up{
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .g-signin2{
+            margin: 30px auto;
+            width: 33%; 
+            visibility: hidden;
+        }
+        .placeholder-google{
+            border: 2px solid white;
+            width: 33%;
+            height: 40px;
+            margin: -61px auto;
+            border-radius: 19px;
+        }
+        .login{
+            margin-top: 10%;
+            text-align: center;
+            color: white;
+            span{
+                text-decoration: underline;
+            }
         }
     }
 }

@@ -54,6 +54,5 @@ this.dataService.getCities();
   onChange(event:any){
     var selectVal= event.source._value;
     this.tripService.filterObj.pepoleNum=selectVal;
-    console.log(this.tripService.filterObj);
   }
 }

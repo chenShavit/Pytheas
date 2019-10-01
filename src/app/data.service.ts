@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class DataService {
@@ -12,8 +13,23 @@ export class DataService {
   };
   rapidHost:string='https://andruxnet-world-cities-v1.p.rapidapi.com/?query=paris&searchby=city';
   cities:any=[];
-  constructor(private http: HttpClient) { }
-
+  isLogin:boolean=false;
+  users:any=[];
+  userExisit:boolean=false;
+  inValidPas:boolean=false;
+  tags:any=[];
+  selectedTags:any=[];
+  baseUrl="https://api-travel-maker.herokuapp.com";
+  constructor(private http: HttpClient, private router: Router) { 
+    this.getAllUsers();
+  }
+  getAllUsers(){
+    debugger
+    return this.http.get(this.baseUrl+'/user/getAll').toPromise()
+      .then((res: any) => {
+        this.users=res;
+      }).catch(); 
+  }
   getCities(){
     return this.http.get(this.rapidHost ,this.httpOptions ).toPromise()
       .then((res: any) => {
@@ -23,6 +39,32 @@ export class DataService {
         "country":res[i].country})
         }
       }).catch(); 
+  }
+   public getTags(): Promise<any> {
+    return this.http.get(this.baseUrl + '/tag/getAll').toPromise()
+      .then((res: any) => {
+        this.tags = res;
+      }).catch();
+  }
+  isUserExisit(email:string){
+    for(var i=0; i<this.users.length;i++){
+      if(this.users[i].email==email){
+        this.userExisit=true;
+      }
+    }
+  }
+  isPasswordMatch(user:any){
+    for(var i=0; i<this.users.length;i++){
+      if((this.users[i].email==user.email) && (this.users[i].password.localeCompare(user.password)==0)){
+        this.inValidPas=false;
+        return;
+      }
+      else{
+        this.inValidPas=true;
+
+      }
+    }
+    
   }
 
 }

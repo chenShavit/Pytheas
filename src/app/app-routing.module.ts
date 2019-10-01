@@ -11,6 +11,7 @@ import { AttractionComponent } from '../app/component/attraction/attraction.comp
 import { FlightsComponent } from '../app/component/flights/flights.component';
 import { MapComponent } from '../app/component/map/map.component';
 import { HotelComponent } from '../app/component/hotel/hotel.component';
+import { LoginComponent } from './component/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,6 +25,8 @@ const routes: Routes = [
   { path: 'flights', component: FlightsComponent },
   { path: 'hotels', component: HotelComponent },
   { path: 'map', component: MapComponent },
+  { path: 'login', component: LoginComponent },
+
 
 ];
   @NgModule({

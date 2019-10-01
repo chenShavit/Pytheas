@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { TripService } from '../../trip.service';
 import { Router } from '@angular/router';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-form-step',
@@ -16,7 +17,7 @@ export class FormStepComponent implements OnInit {
   }
   secondFormGroup:FormGroup;
   selectable: boolean = true
-  constructor(private _formBuilder: FormBuilder,private router: Router , public tripService: TripService) { }
+  constructor(public dataService:DataService, private _formBuilder: FormBuilder,private router: Router , public tripService: TripService) { }
 
   ngOnInit() {
     this.secondFormGroup = new FormGroup({
@@ -24,7 +25,7 @@ export class FormStepComponent implements OnInit {
     })
   }
   isSelected(tag: any): boolean {
-    this.tripService.selectedTags.push(tag);
+    this.dataService.selectedTags.push(tag);
     return tag.isClicked = !tag.isClicked;
   }
   nextStep(val:any){

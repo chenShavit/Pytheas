@@ -12,7 +12,6 @@ import { HotelComponent } from './component/hotel/hotel.component';
 import { MapComponent } from './component/map/map.component';
 import { TripDetailsComponent } from './component/trip-details/trip-details.component';
 import { TripMainComponent } from './component/trip-main/trip-main.component';
-import { SearchBarComponent } from './component/search-bar/search-bar.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {AgmCoreModule} from '@agm/core';
 import {
@@ -34,23 +33,10 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './component/home/home.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { TripService } from './trip.service';
+import { LoginComponent } from './component/login/login.component';
 
-// import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
-// import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
 
-// let config = new AuthServiceConfig([
-//   {
-//     id: GoogleLoginProvider.PROVIDER_ID,
-//     provider: new GoogleLoginProvider("Google-OAuth-Client-Id")
-//   },
-//   {
-//     id: FacebookLoginProvider.PROVIDER_ID,
-//     provider: new FacebookLoginProvider("Facebook-App-Id")
-//   }
-// ]);
-// export function provideConfig() {
-//   return config;
-// }
+
 
 @NgModule({
   
@@ -65,12 +51,11 @@ import { TripService } from './trip.service';
     MapComponent,
     TripDetailsComponent,
     TripMainComponent,
-    SearchBarComponent,
     FlightsComponent,
     HomeComponent,
+    LoginComponent
   ],
   imports: [
-    // SocialLoginModule,
     MatSelectModule,
     BrowserAnimationsModule,
     Ng5SliderModule,
@@ -95,10 +80,6 @@ import { TripService } from './trip.service';
     RouterModule.forRoot([])
   ],
   providers: [DataService, TripService
-  //    {
-  //   provide: AuthServiceConfig,
-  //   useFactory: provideConfig
-  // }
 ],
   bootstrap: [AppComponent]
 })

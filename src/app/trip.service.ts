@@ -122,12 +122,7 @@ export class TripService {
 
       }).catch(); 
   }
-  // public getTags(): Promise<any> {
-  //   return this.http.get(this.baseUrl + '/tags').toPromise()
-  //     .then((res: any) => {
-  //       this.tags = res.slice(0, 15);
-  //     }).catch();
-  // }
+ 
   
   public getCities(): Promise<any> {
     return this.http.get(this.baseUrl + '/cities').toPromise()

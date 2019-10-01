@@ -1,0 +1,69 @@
+* {
+    font-family: Roboto-Regular;
+}
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        .logo-placeholder {
+            margin: 0 auto;
+            width: 100%;
+            height: 54vh;
+            background-color: #FE784D;
+            border-radius: 39%;
+        }
+        .logo {
+            background: url(/assets/TravelMaker.png) scroll -66px -75px;
+            width: 100%;
+            height: 35vh;
+            background-repeat: no-repeat;
+        }
+        .bth {
+            background-color: white;
+            width: 33%;
+            height: 35px;
+            margin: 50px auto 21px;
+            border-radius: 19px;
+            padding-top: 16px;
+            font-size: 18px;
+    text-align: center;
+    -webkit-filter: drop-shadow(2px 2px 2px #00000059);
+    filter: drop-shadow(2px 2px 2px #00000059);
+            span {
+                color: #FF5347;
+                font-family: Roboto-Black;
+                margin-top: 3px;
+            }
+        }
+        input{
+            padding: 12px 20px;
+            margin: 10% auto 10%;
+            width: 53%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 1px solid #FE784D;
+            display: block;
+            font-size: 16px;
+                color:#FE784D;
+        }
+        .title{
+            color: white;
+            float: left;
+            font-size: 22px;
+            padding: 7%;
+        }
+        .error{
+            color: #FE784D;
+            font-weight: bold;
+            position: absolute;
+            left: 23%;
+            /* top: 23%; */
+            bottom: 30%;
+        }
+        .password{
+            bottom: 18% !important;
+        }
+       
+    }
+
+

@@ -357,7 +357,75 @@ export const trips_data = [{
                 "suggested_duration": "More than 3 hours",
                 "website": ""
             }
-        ]
+        ],
+        {
+            "destination": "Bali",
+            "start_date": "2/9/2019",
+            "end_date": "4/9/2019",
+            "days": 3,
+            "isBooked": true,
+            "price": 14000,
+            "pictures": ["assets/bali1.jpeg", "assets/bali4.jpeg"],
+            "pepole_number": 2,
+            "places": [
+                [{
+                    "name": "Nyaman Gallery",
+                    "picture": "/assets/bali1.jpeg",
+                    "icons": ["assets/art-icon.png", "assets/shopping-icon.png", "assets/museumsicon.png"],
+                    "description": "Nyaman Gallery is a pioneer international contemporary art gallery in Bali, located in the heart of Seminyak. The word “nyaman” means cozy or comfortable in the Indonesian language. It defines the philosophy of the gallery: we aim to provide our guests a space reflecting the ease and welcoming atmosphere of Bali, in which they can interact and enjoy our unique art collection",
+                    "time": "3-5 hours"
+                },
+                 {
+                    "name": "Lempad House",
+                    "picture": "/assets/bali5.jpeg",
+                    "icons": ["assets/history-icon.png"],
+                    "description": "Lempad House (Lempad’s House), often referred to as Lempad of Bali House, is a historical site in Ubud. The quaint Balinese home compound was the home of the late great Balinese artist, I Gusti Nyoman Lempad. As an architect, Lempad designed many of the palaces and temples throughout Ubud and as a painter, his distinctive line drawings, which drew inspiration from local folklore, greatly influenced the Balinese art scene.",
+                    "time": "3-5 hours"
+                }],
+                  [{
+                    "name": "Song Tepo Beach",
+                    "picture": "/assets/bali7.jpeg",
+                    "icons": ["assets/beaches-icon.png"],
+                    "description": "Song Tepo Beach located at the south-west coastal of Nusa Ceningan island, nearby the yellow bridge. It is a white sand beach with crystal clear water. The visitors are allowed to swim at this beach, because it is relatively safe wit no big waves and shallow depth. However, kids must be always under supervised.",
+                    "time": "2-4 hours"
+                },
+                   {
+                    "name": "Mount Agung",
+                    "picture": "/assets/bali8.jpeg",
+                    "icons": ["assets/nature-icon.png"],
+                    "description": "Mount Agung or Gunung Agung is a currently active volcano in Bali, Indonesia, southeast of Mt Batur volcano, also in Bali. Gunung Agung stratovolcano is the highest point on Bali. It dominates the surrounding area, influencing the climate, especially rainfall patterns. From a distance, the mountain appears to be perfectly conical. From the peak of the mountain, it is possible to see the peak of Mt Rinjani on the nearby island of Lombok, to the east, although both mountains are frequently covered in clouds.",
+                    "time": "1-3 hours"
+                },
+                  {
+                    "name": "Canggu Beach",
+                    "picture": "/assets/bali8.jpeg",
+                    "icons": ["assets/beaches-icon.png"],
+                    "description": "Canggu is a coastal village between Seminyak and Tanah Lot. The coastline has several black-sand beaches, almost all with surf breaks that are popular among local and international surfers. These include the beaches of Berawa that borders just north of Seminyak’s Batubelig Beach, Batu Bolong, Batu Mejan (Echo Beach), Pererenan, Seseh and Mengening.",
+                    "time": "2-4 hours"
+                }],
+                [{
+                    "name": "Purpa Fine Art Gallery Seminyak",
+                    "picture": "/assets/bali9.jpeg",
+                    "icons": ["assets/art-icon.png"],
+                    "description": "Purpa Fine Art Gallery offers a unique collection of contemporary art by both established and emerging artists. We have represented most of the artists, not only Indonesian artists but artists of all nationalities who live in Bali or spend time here. Some of the artists are now recognized worldwide such as Walter Spies, Antonio Blanco, Hans Snell, I Gusti Nyoman Lempad, Miguel Covarrubias, Arie Smit, Krijono and many others. It has been our goal to work with our artists for the long term, assisting them through their careers by exhibiting their works at our gallery and placing them in prominent collections. We strive to present works by emerging and mid career artists that inspire, excite, and intrigue our diverse clientele.",
+                    "time": "3-5 hours"
+                },
+                   {
+                    "name": "Purpa Fine Art Gallery Seminyak",
+                    "picture": "/assets/bali9.jpeg",
+                    "icons": ["assets/art-icon.png", "assets/shopping-icon.png", "assets/museumsicon.png"],
+                    "description": "Purpa Fine Art Gallery offers a unique collection of contemporary art by both established and emerging artists. We have represented most of the artists, not only Indonesian artists but artists of all nationalities who live in Bali or spend  here. Some of the artists are now recognized worldwide such as Walter Spies, Antonio Blanco, Hans Snell, I Gusti Nyoman Lempad, Miguel Covarrubias, Arie Smit, Krijono and many others. It has been our goal to work with our artists for the long term, assisting them through their careers by exhibiting their works at our gallery and placing them in prominent collections. We strive to present works by emerging and mid career artists that inspire, excite, and intrigue our diverse clientele.",
+                    "time": "3-5 hours"
+                },
+                 {
+                    "name": "Waterbom",
+                    "picture": "/assets/bali10.jpeg",
+                    "icons": ["assets/art-icon.png", "assets/shopping-icon.png", "assets/museumsicon.png"],
+                    "description": "Waterbom Bali is where you can enjoy a full wet day out with family and friends, through numerous waterslides, rides and playful games. This islands premier water park is just across the road from the Discovery Kartika Plaza and Discovery Shopping Mall in south Kuta, and has grown to feature 17 exciting slides and water games for all ages since its inception in 1993. The park covers 3.8Ha of tropical gardens and pools, as well as a complete host of dining and leisure facil",
+                    "time": "3-5 hours"
+                }
+                ]]
+        }
     ]
 
 },
@@ -368,4 +436,12 @@ export const users = [{
     password: '1234',
     trips: trips_data,
     tags: tags,
-}];
+},
+{
+    full_name: "Ella Levi",
+    email: 'ella@gmail.com',
+    password: '1234',
+    trips: trips_data,
+    tags: tags,
+},
+];

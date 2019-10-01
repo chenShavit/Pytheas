@@ -1,36 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-// import { AuthService } from "angularx-social-login";
-// import { SocialUser } from "angularx-social-login";
-// import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-login";
+import { DataService } from '../../data.service';
+import { Router } from '@angular/router';
 
+declare var FB: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  // private user: SocialUser;
-  // private loggedIn: boolean;
+ 
 
-  constructor() { }
+  constructor(public dataService:DataService, private router: Router) { }
 
   ngOnInit() {
-    // this.authService.authState.subscribe((user) => {
-    //   this.user = user;
-    //   this.loggedIn = (user != null);
-    // });
+  
   }
-  // signInWithGoogle(): void {
-  //   this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-  // }
- 
-  // signInWithFB(): void {
-  //   this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-  // } 
- 
-  // signOut(): void {
-  //   this.authService.signOut();
-  // }
+  onSignIn(googleUser:any) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
+  login(flag:boolean){
+    if(flag){
+      this.dataService.isLogin=true;
+    }
+    else{
+      this.dataService.isLogin=false;
+    }
+    this.router.navigate(['/login']);
+  }
   }
 
 
