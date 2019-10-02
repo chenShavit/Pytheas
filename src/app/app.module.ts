@@ -36,8 +36,6 @@ import { TripService } from './trip.service';
 import { LoginComponent } from './component/login/login.component';
 
 
-
-
 @NgModule({
   
   declarations: [

@@ -4,7 +4,7 @@
       <div class="side-bar">
   
       </div>
-      <div class="title">{{this.user.full_name}}</div>
+      <div class="title">{{this.user.fullName}}</div>
       <div class="edit-profile">
         <div class="saved">
           <div class="number-saved">
@@ -30,9 +30,9 @@
       </div>
     </div>
     <div class="container-trips">
-      PLANNED TRIPS
+      TRIPS
       <div class="planned-trips">
-          <div class="trip" *ngFor="let trip of tripService.trips; let i=index" (click)="chooseTrip(i)" >
+          <div class="trip" *ngFor="let trip of tripService.user.trips; let i=index" (click)="chooseTrip(i)" >
               <div class="picture">
                 <img src="{{trip.pictures[0]}}">
               </div>
@@ -47,6 +47,9 @@
               </div>
               <div class="line"></div>
             </div>
+      </div>
+      <div *ngIf="tripService.user.trips.length == 0">
+        No trips planned, Let's explore new trips!
       </div>
     </div>
     <div class="placeholder-bth" [routerLink]="['/choose']">

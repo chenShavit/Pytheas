@@ -3,9 +3,11 @@
       <div *ngIf="dataService.isLogin" class="title">Welcome back, Log in!</div>
         <div class="logo"></div>
       </div>
-          <input type="email" [(ngModel)]="data.email" (keyup)=checkEmail($event)>
+       <input *ngIf="!dataService.isLogin" type="text" [(ngModel)]="data.fullName" placeholder="Full Name" (blur)=onBlur($event)>
+       <span class="error name"  *ngIf="isEmpty">*required</span>
+          <input type="email" [(ngModel)]="data.email" (keyup)=checkEmail($event) placeholder="Email">
           <span class="error"  *ngIf="isEmail&&!dataService.isLogin">*InValid Email address</span>
-          <input type="password" [(ngModel)]="data.password">
+          <input type="password" [(ngModel)]="data.password" placeholder="Password">
           <span class="error password" *ngIf="this.dataService.inValidPas&&dataService.isLogin">Wrong password</span>
         <div class="bth" (click)="checkForm()">
             <span *ngIf="dataService.isLogin">Log in</span>

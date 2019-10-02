@@ -41,7 +41,7 @@ export class TripService {
   arrivalTime:any;
   headers = new Headers({ 'Content-X-RapidAPI-Host': 'apidojo-kayak-v1.p.rapidapi.com/json' , 'X-RapidAPI-Key':'9a0a65a225msh958c12adcce4cd7p12ff05jsncf3f7562621b'});
   kilURL: string ='https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&';
-  baseUrl: string = 'http://ec2-35-180-205-235.eu-west-3.compute.amazonaws.com/api';
+  baseUrl: string = 'https://api-travel-maker.herokuapp.com/api';
   flightsURL:string ='https://api.skypicker.com/flights?';
   hotelURL:string='https://apidojo-kayak-v1.p.rapidapi.com/hotels/create-session?airportcode=CDG&rooms=1';
   hotelsData:any;
@@ -93,20 +93,13 @@ export class TripService {
       loop: true
   };
   }
-
-  // public getTrips(): Promise<any> {
-  //   return this.http.get(this.baseUrl + '/trip').toPromise()
-  //   .then((res: any) => {
-  //     this.trips=res;
-  //     for( var i=0; i <this.trips.length;i++){
-  //       this.trips[i].pictures=this.pics;
-  //       for( var j=0; j < this.trips[i].places.length;j++){
-  //         for( var k=0; k < this.trips[i].places[j].length;k++)
-  //         this.trips[i].places[j][k].picture=this.pics[1];
-  //       }
-  //     }
-  //   }).catch(); 
-  // }
+  getUserDetails(email:string){
+    debugger
+    return this.http.post(this.baseUrl+'/user/getTrips',{email:email}).toPromise()
+    .then((res: any) => {
+      this.user.trips=res;
+    }).catch(); 
+  }
    public getExplore(): Promise<any> {
     return this.http.get(this.baseUrl + '/explore').toPromise()
       .then((res: any) => {
@@ -121,9 +114,7 @@ export class TripService {
         }
 
       }).catch(); 
-  }
- 
-  
+  }  
   public getCities(): Promise<any> {
     return this.http.get(this.baseUrl + '/cities').toPromise()
       .then((res: any) => {

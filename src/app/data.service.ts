@@ -24,9 +24,16 @@ export class DataService {
     this.getAllUsers();
   }
   getAllUsers(){
-    debugger
     return this.http.get(this.baseUrl+'/user/getAll').toPromise()
       .then((res: any) => {
+        this.users=res;
+      }).catch(); 
+  }
+
+  addNewUser(data:any){
+    return this.http.put(this.baseUrl+'/user/add',{ fullName : data.fullName, email: data.email,password :data.password}).toPromise()
+      .then((res: any) => {
+        debugger
         this.users=res;
       }).catch(); 
   }

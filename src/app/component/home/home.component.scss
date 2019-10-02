@@ -21,7 +21,7 @@
             background-color: white;
     width: 33%;
     height: 35px;
-    margin: 77px auto 21px;
+    margin: 27px auto 21px;
     border-radius: 19px;
     padding-top: 16px;
     font-size: 18px;
@@ -34,13 +34,13 @@
                 margin-top: 3px;
             }
         }
-        .google-plus{
-            background: url('/assets/google-plus.png');
-            background-repeat: no-repeat;
-            width: 32px;
-            height: 32px;
-            margin: 0 auto;
-        }
+        // .google-plus{
+        //     background: url('/assets/google-plus.png');
+        //     background-repeat: no-repeat;
+        //     width: 32px;
+        //     height: 32px;
+        //     margin: 0 auto;
+        // }
         .facebook{
             background: url('/assets/facebook-logo-button.png');
             background-repeat: no-repeat;
@@ -56,15 +56,15 @@
         .g-signin2{
             margin: 30px auto;
             width: 33%; 
-            visibility: hidden;
+
         }
-        .placeholder-google{
-            border: 2px solid white;
-            width: 33%;
-            height: 40px;
-            margin: -61px auto;
-            border-radius: 19px;
-        }
+        // .placeholder-google{
+        //     border: 2px solid white;
+        //     width: 33%;
+        //     height: 40px;
+        //     margin: -61px auto;
+        //     border-radius: 19px;
+        // }
         .login{
             margin-top: 10%;
             text-align: center;
