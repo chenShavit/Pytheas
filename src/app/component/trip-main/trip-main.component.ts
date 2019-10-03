@@ -17,7 +17,6 @@ export class TripMainComponent implements OnInit {
 
 
   ngOnInit() {
-    debugger
     this.user = this.tripService.user;
     this.trips = this.tripService.user.trips;
   }

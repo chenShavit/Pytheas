@@ -17,9 +17,8 @@ export class HomeComponent implements OnInit {
   
   }
   onSignIn(googleUser:any) {
-    debugger
     var profile = googleUser.getBasicProfile();
-    debugger
+
     this.router.navigate(['/login']);
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());

@@ -33,7 +33,6 @@ export class DataService {
   addNewUser(data:any){
     return this.http.put(this.baseUrl+'/user/add',{ fullName : data.fullName, email: data.email,password :data.password}).toPromise()
       .then((res: any) => {
-        debugger
         this.users=res;
       }).catch(); 
   }

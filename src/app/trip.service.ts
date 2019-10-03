@@ -94,7 +94,6 @@ export class TripService {
   };
   }
   getUserDetails(email:string){
-    debugger
     return this.http.post(this.baseUrl+'/user/getTrips',{email:email}).toPromise()
     .then((res: any) => {
       this.user.trips=res;
@@ -157,7 +156,6 @@ export class TripService {
   });
   }
   public getFilght(details:any): Promise<any> {
-    debugger
     var from = details.from;
     var to = details.to;
     var dateFrom = details.dateFrom;
