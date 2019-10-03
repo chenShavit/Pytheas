@@ -1,7 +1,7 @@
 import {Trip} from './trip'
 import {Profile} from './profile'
 export class User{
- full_name:string;
+ fullName:string;
  email:string;
  password:string;
  token:string;

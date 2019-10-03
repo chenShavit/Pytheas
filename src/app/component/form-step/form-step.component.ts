@@ -23,6 +23,7 @@ export class FormStepComponent implements OnInit {
     this.secondFormGroup = new FormGroup({
       profileName: new FormControl()
     })
+    this.dataService.getTags();
   }
   isSelected(tag: any): boolean {
     this.dataService.selectedTags.push(tag);

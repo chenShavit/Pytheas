@@ -46,7 +46,7 @@ export class DataService {
         "country":res[i].country})
         }
       }).catch(); 
-  }
+  } 
    public getTags(): Promise<any> {
     return this.http.get(this.baseUrl + '/tag/getAll').toPromise()
       .then((res: any) => {

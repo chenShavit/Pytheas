@@ -32,12 +32,12 @@ this.isEmpty=false;
     }
   }
   checkForm(){
-    this.tripService.user= new User(); 
     if(this.dataService.isLogin){
     this.dataService.isUserExisit(this.data.email);
     this.dataService.isPasswordMatch(this.data);
     if(!this.dataService.inValidPas &&this.dataService.userExisit ){
-      this.tripService.getUserDetails(this.data.email);
+      
+      // this.tripService.getUserDetails(this.data.email);
       this.router.navigate(['/trip']);
     }
   }

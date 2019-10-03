@@ -9,7 +9,7 @@ export class ChooseProfileComponent implements OnInit {
 
   constructor() { }
 
-    tags=[{name:'Art', icon:"/assets/user.png"},{name:'Bachelors',icon:"/assets/user.png"},{name:'Family', icon:"/assets/user.png"},{ name:'Add Profile', icon:"/assets/plus-black-symbol.png"}];
+    tags=[{name:'Art', icon:"/assets/user.png"},{name:'Music',icon:"/assets/user.png"},{name:'Family', icon:"/assets/user.png"},{ name:'Add Profile', icon:"/assets/plus-black-symbol.png"}];
   ngOnInit() {
 
    

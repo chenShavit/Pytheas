@@ -9,10 +9,10 @@ import { TripService } from '../../trip.service';
 })
 export class FlightsComponent implements OnInit {
   details= {
-    from:'TLV',
+    from:'Tel Aviv',
     to: 'CDG',
-    dateFrom : '18/9/2019',
-    dateTo : '23/9/2019'
+    dateFrom : '18/11/2019',
+    dateTo : '23/11/2019'
   }
   constructor(private router: Router, public tripService: TripService) {
  

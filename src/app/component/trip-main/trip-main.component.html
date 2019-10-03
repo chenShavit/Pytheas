@@ -19,8 +19,12 @@
         </div>
         <div class="trips">
           <div class="number-trips">
-            {{this.user.trips.length}}
+            {{this.user.trips.length}} 
           </div>
+          <div class="number-trips" *ngIf="!tripService.user.trips">
+           0
+          </div>
+         
           TRIPS
         </div>
         <div class="edit-bth">
@@ -43,12 +47,12 @@
               </div>
       
               <div class="day">
-               <span> 04 </span><span>September</span>
+               <span> 04 </span><span>November</span>
               </div>
               <div class="line"></div>
             </div>
       </div>
-      <div *ngIf="tripService.user.trips.length == 0">
+      <div *ngIf="!tripService.user.trips">
         No trips planned, Let's explore new trips!
       </div>
     </div>

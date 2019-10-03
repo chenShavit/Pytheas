@@ -431,14 +431,14 @@ export const trips_data = [{
 },
 ];
 export const users = [{
-    full_name: "Chen Shavit",
+    fullName: "Chen Shavit",
     email: 'ck20427@gmail.com',
     password: '1234',
     trips: trips_data,
     tags: tags,
 },
 {
-    full_name: "Ella Levi",
+    fullName: "Ella Levi",
     email: 'ella@gmail.com',
     password: '1234',
     trips: trips_data,

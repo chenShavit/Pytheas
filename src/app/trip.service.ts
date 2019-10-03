@@ -157,6 +157,7 @@ export class TripService {
   });
   }
   public getFilght(details:any): Promise<any> {
+    debugger
     var from = details.from;
     var to = details.to;
     var dateFrom = details.dateFrom;
